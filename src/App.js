@@ -1,7 +1,7 @@
 import React, {useReducer} from 'react';
-import ComponentA from './components/ComponentA';
-import ComponentB from './components/ComponentB';
-import ComponentC from './components/ComponentC';
+// import ComponentA from './components/ComponentA';
+// import ComponentB from './components/ComponentB';
+// import ComponentC from './components/ComponentC';
 // import PParentCompoent from './components/PParentCompoent';
 // import Home from '../src/components/Home';
 // import Hello from '../src/components/Hello';
@@ -12,7 +12,8 @@ import ApiCall from './components/ApiCall';
 //import CounterOne from './components/CounterOne';
 //import CounterTwo from './components/CounterTwo';
 //import CounterThree from './components/CounterThree';
-import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+//import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import Counter from './components/Counter';
 
 
 export const CountContext = React.createContext();
@@ -42,6 +43,7 @@ function App() {
   return (
     <CountContext.Provider value={{countState : count , countDispatch : dispatch}}>
     <div className="App">
+    <Counter/>
       {/* <Home/>
       <Hello increment={()=> setCount(count + 1)}/> */}
       {/* <FocusInput/> */}
@@ -54,15 +56,15 @@ function App() {
       {/* <ComponentB/>
       <ComponentC/> */}
       {/* <PParentCompoent/> */}
-
       <ApiCall/>
-      <Router>
+      {/* <Router>
         <div>
           <Route path="/about" component={ComponentA} />
           <Route path="/users" component={ComponentB} />
           <Route path="/contact" component={ComponentC} />
         </div>
-      </Router>
+      </Router> */}
+
     </div>
   </CountContext.Provider>    
 
